@@ -1,0 +1,50 @@
+﻿@using MyMiniBlog1.Models.Repository
+@{
+    ViewBag.Title = "contact";
+
+}
+@model contact
+<style>
+    .form-group{
+        margin:10px 0 0 0;
+        padding:10px;
+    }
+</style>
+<div class="container">
+    <br />
+    <h1 class="text-center">İletişim</h1>
+    @using (Html.BeginForm("contact", "ContactAndAbout", FormMethod.Post))
+    {
+
+
+        <div class="form-group">
+            <label>Kullanıcı Id</label>
+            @* <input type="text" class="form-control" id="txtad1"/>*@
+            @Html.TextBoxFor(model => model.userid, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Kullanıcı Adı</label>
+            @* <input type="text" class="form-control" id="txtad1"/>*@
+            @Html.TextBoxFor(model => model.username, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Kullanıcı SoyAdı</label>
+            @*<input type="text" class="form-control" />*@
+            @Html.TextBoxFor(model => model.userlastname, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Kullanıcı Email</label>
+            @*<input type="text" class="form-control" />*@
+            @Html.TextBoxFor(model => model.useremail, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Mesaj</label>
+            @*<textarea type="text" class="form-control" style="height:200px;"></textarea>*@
+            @Html.TextAreaFor(model => model.usermessage, new { @class = "form-control", @style = "height:200px;" })
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-dark">Gönder!</button>
+        </div>
+    }
+</div>
+

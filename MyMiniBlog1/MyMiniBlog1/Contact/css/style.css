@@ -1,0 +1,31 @@
+﻿
+
+.mycard {
+    width: 100%;
+    height: auto;
+    border: 1px solid darkgray;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 1rem 0px 1rem 0px;
+}
+
+    .mycard img {
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+.mycard-body {
+    padding: 10px;
+}
+
+.mycard-contact p {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tags ul li {
+    margin: 0px 3px 0 0px;
+}

@@ -1,0 +1,44 @@
+﻿@using MyMiniBlog1.Models.Views
+@{
+    ViewBag.Title = "homePage";
+}
+@model List<ViewMyBlog>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-9">
+            @foreach (var item in Model)
+            {
+                
+                <div class="mycard">
+                    <img src="~/Contact/image/@item.blogimage.ToString()" alt="Alternate Text" />
+                    <div class="mycard-body">
+                        <div class="mycard-title d-flex justify-content-between">
+                            <h3>@item.blogtitle</h3>
+                            <h3>@item.blogYayinTarih</h3>
+                        </div>
+                        <div class="tags">
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item badge rounded-pill text-bg-primary">@item.blogTagName.ToString()</li>
+                            </ul>
+                        </div>
+                        <hr />
+                        <div class="mycard-contact">
+                            <p class="fs-5">
+                                @item.blogContact
+                            </p>
+                            <hr />
+                            <div class="d-flex justify-content-end">
+                                @Html.ActionLink("Okumaya Devam Et", "homepage", null, new { @class = "btn btn-outline-dark  " })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <div class="col-sm-12 col-md-3">
+
+        </div>
+    </div>
+</div>
+

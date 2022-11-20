@@ -1,0 +1,25 @@
+﻿@using MyMiniBlog1.Models.Repository
+@{
+    ViewBag.Title = "about";
+
+}
+<style>
+    .about-container{
+        margin:10px;
+    }
+    img {
+        width: 100%;
+    }
+</style>
+@model List<about>
+<div class="container">
+    @foreach (var item in Model)
+    {
+    <div class="about-container">
+        <img src="~/Contact/image/@item.aboutImage" />
+        <h1>@item.aboutTitle</h1>
+        <p>@item.abouticerik</p>
+    </div>
+    }
+</div>
+
